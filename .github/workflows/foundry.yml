@@ -21,7 +21,7 @@ jobs:
           submodules: recursive
 
       - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
+        uses: foundry-rs/foundry-toolchain@v1.0.10
         with:
           version: nightly
 
@@ -35,3 +35,8 @@ jobs:
         run: |
           forge test
         id: test
+
+      - name: Run snapshot
+        run: |
+          forge snapshot
+        id: snapshot
