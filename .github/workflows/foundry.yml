@@ -6,6 +6,7 @@ on:
 
 env:
   FOUNDRY_PROFILE: ci
+  RPC_URL_MAINNET: ${{ secrets.RPC_URL_MAINNET }}
 
 jobs:
   check:
